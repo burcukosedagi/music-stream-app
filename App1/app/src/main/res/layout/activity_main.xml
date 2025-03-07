@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D0D0D"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtViewUsername2"
+        android:layout_width="226dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="684dp"
+        android:text="Hoşgeldin,"
+        android:textColor="#F2F1F1"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtView"
+        android:layout_width="226dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="375dp"
+        android:text="Size Özel Albümler"
+        android:textColor="#F2F1F1"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <ImageButton
+
+        android:id="@+id/imgBtnSettings"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="68dp"
+        android:scaleType="centerCrop"
+        android:background="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="416dp"
+        android:layout_height="219dp"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.316" />
+
+    <TextView
+        android:id="@+id/txtViewAlbumCount"
+        android:layout_width="393dp"
+        android:layout_height="88dp"
+        android:layout_marginBottom="240dp"
+        android:text="Henüz albümünüz yok!"
+        android:textColor="#F4F4F4"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollViewAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginBottom="130dp"
+        android:background="#F6282727"
+        android:fadeScrollbars="false"
+        android:padding="8dp"
+        android:scrollbarSize="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="215dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imgBtnFotoAlbum1"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#00FFFFFF"
+                    android:onClick="imggoAlbumOnClick"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/txtViewFotoAlbumName1"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="746dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="215dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imgBtnFotoAlbum2"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#00FFFFFF"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:onClick="imggoAlbumOnClick"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/txtViewFotoAlbumName2"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="746dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="215dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imgBtnFotoAlbum3"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#00FFFFFF"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:onClick="imggoAlbumOnClick"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/txtViewFotoAlbumName3"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="746dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="215dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imgBtnFotoAlbum4"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#00FFFFFF"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:onClick="imggoAlbumOnClick"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/txtViewFotoAlbumName4"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="746dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="215dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imgBtnFotoAlbum5"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#00FFFFFF"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:onClick="imggoAlbumOnClick"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/txtViewFotoAlbumName5"
+                    android:layout_width="150dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="746dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMenu"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#070707"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imgBtnHome"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#00FFFFFF"
+                android:onClick="goBackHomeOnClick"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_home" />
+
+            <Button
+                android:id="@+id/btnHome"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#00FFFFFF"
+                android:textColor="#FFFFFF"
+                android:onClick="goBackHomeOnClick"
+                android:text="Home"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imgBtnProfile2"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#00FFFFFF"
+                android:onClick="goBackProfilOnClick"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_profile" />
+
+            <Button
+                android:id="@+id/btnProfile"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#00FFFFFF"
+                android:textColor="#FFFFFF"
+                android:onClick="goBackProfilOnClick"
+                android:text="Profile"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+        <!-- Sağ bölme -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imgBtnSearch"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#00FFFFFF"
+                android:onClick="goBackSearchOnClick"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_search" />
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:backgroundTint="#00FFFFFF"
+                android:textColor="#FFFFFF"
+                android:onClick="goBackSearchOnClick"
+                android:text="Search"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAddAlbum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#232323"
+        android:onClick="AddAlbumOnClick"
+        android:text="+ Yeni Çalma Listesi Ekle"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

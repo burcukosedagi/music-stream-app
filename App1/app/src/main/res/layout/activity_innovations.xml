@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/innavationPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#050505"
+    tools:context=".InnovationsActivity">
+
+    <ImageButton
+        android:id="@+id/imgBtnBack"
+        android:layout_width="62dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="340dp"
+        android:backgroundTint="#040404"
+        android:onClick="btnBackToSettingOnClick"
+        app:layout_constraintBottom_toTopOf="@+id/txtView13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <TextView
+        android:id="@+id/txtView13"
+        android:layout_width="386dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center|left"
+        android:text="   Yenilikler"
+        android:textColor="#D0CECE"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtnBack" />
+
+    <TextView
+        android:id="@+id/txtView14"
+        android:layout_width="385dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="12dp"
+        android:text="  Takip ettiğin sanatçılardan, podcastlerden ve programlardan yeni çıkanlar"
+        android:textColor="#8E8B8B"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtView15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtView13" />
+
+    <TextView
+        android:id="@+id/txtView15"
+        android:layout_width="279dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="65dp"
+        android:gravity="center"
+        android:text="Henüz senin için    gösterilebileceğimiz bir yenilik yok  "
+        android:textColor="#D0CECE"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtView16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtView14" />
+
+    <TextView
+        android:id="@+id/txtView16"
+        android:layout_width="275dp"
+        android:layout_height="94dp"
+        android:layout_marginBottom="224dp"
+        android:gravity="center"
+        android:text=" Yeniliklerden haberdar olmak için bu sayfayı kontrol et."
+        android:textColor="#8E8B8B"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtView15" />
+</androidx.constraintlayout.widget.ConstraintLayout>

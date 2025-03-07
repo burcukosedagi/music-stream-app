@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020202"
+    tools:context=".SignUpActivity">
+
+    <CheckBox
+        android:id="@+id/btncheckBoxGender3"
+        android:layout_width="85dp"
+        android:layout_height="45dp"
+        android:text="Diğer"
+        android:textColor="#6D6F6F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.731"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.684" />
+
+    <TextView
+        android:id="@+id/txtView19"
+        android:layout_width="280dp"
+        android:layout_height="150dp"
+        android:gravity="center"
+        android:text="E-mail adresinle kayıt ol"
+        android:textColor="#FFFFFF"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07" />
+
+    <EditText
+        android:id="@+id/editTxtTxtEmailAddress"
+        android:layout_width="285dp"
+        android:layout_height="49dp"
+        android:textSize="15dp"
+        android:ems="10"
+        android:hint=" E-mail adresinizi giriniz"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#6D6F6F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.267" />
+
+    <EditText
+        android:id="@+id/editTxtTxtPassword"
+        android:layout_width="285dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint=" Parolanızı giriniz"
+        android:textSize="15dp"
+        android:textColorHint="#6D6F6F"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.444" />
+
+    <EditText
+        android:id="@+id/editTxtTxtUserName"
+        android:layout_width="285dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:textSize="15dp"
+        android:hint=" Kullanıcı adınızı giriniz"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#6D6F6F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.353" />
+
+    <EditText
+        android:id="@+id/editTxtDate"
+        android:layout_width="285dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:textSize="15dp"
+        android:hint="Doğum tarihi(gg-aa-yyyy)"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#6D6F6F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.535" />
+
+    <CheckBox
+        android:id="@+id/btncheckBoxGender1"
+        android:layout_width="85dp"
+        android:layout_height="45dp"
+        android:text="Kadın"
+        android:textColor="#6D6F6F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.202"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.685" />
+
+    <TextView
+        android:id="@+id/txtView20"
+        android:layout_width="236dp"
+        android:layout_height="36dp"
+        android:text="Cinsiyetinizi seçiniz:"
+        android:textColor="#BDBDBD"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <CheckBox
+        android:id="@+id/btncheckBoxGender2"
+        android:layout_width="85dp"
+        android:layout_height="45dp"
+        android:text="Erkek"
+        android:textColor="#6D6F6F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.685" />
+
+    <CheckBox
+        android:id="@+id/btncheckBox"
+        android:layout_width="340dp"
+        android:layout_height="80dp"
+        android:text=" "
+        android:textColor="#6D6F6F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.934" />
+
+    <Button
+        android:id="@+id/btnSignnn"
+        android:layout_width="106dp"
+        android:layout_height="52dp"
+        android:backgroundTint="#D0CECE"
+        android:onClick="goToMainPonClick"
+        android:text="ÜYE OL"
+        android:textColor="#040404"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.778" />
+
+    <ImageButton
+        android:id="@+id/btnBackLogIn"
+        android:layout_width="54dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#020202"
+        android:onClick="backToLogInOnClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+
+    <TextView
+        android:id="@+id/txtPrivacyPolicy"
+        android:layout_width="330dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="gizlilik sözleşmesini okudum ve kabul ediyorum. "
+        android:textColor="#6D6F6F"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.74"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.911" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

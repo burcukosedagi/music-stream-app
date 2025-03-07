@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainSetting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#040404"
+    android:backgroundTint="#070707"
+    android:foregroundTint="#090909">
+
+    <ImageButton
+        android:id="@+id/imgBtnbacktoHome1"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="356dp"
+        android:layout_marginBottom="11dp"
+        android:backgroundTint="#020202"
+        android:onClick="backtoHome"
+        app:layout_constraintBottom_toTopOf="@+id/imgBtnProfilPhoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <ImageButton
+        android:id="@+id/imgBtnProfilPhoto"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="33dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/rounded_cornercircle"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout3"
+        app:layout_constraintEnd_toStartOf="@+id/btnViewProfile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtnbacktoHome1" />
+
+    <TextView
+        android:id="@+id/txtViewProfileName"
+        android:layout_width="274dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="35dp"
+        android:text=""
+        android:textColor="#D0CECE"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnViewProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgBtnProfilPhoto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnViewProfile"
+        android:layout_width="267dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="59dp"
+        android:backgroundTint="#040404"
+        android:gravity="left"
+        android:onClick="viewProfile"
+        android:text="profili görüntüle"
+        android:textColor="#898686"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgBtnProfilPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewProfileName" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout3"
+        android:layout_width="410dp"
+        android:layout_height="281dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.495">
+
+        <ImageButton
+            android:id="@+id/imgBtnsettings2"
+            android:layout_width="73dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#020202"
+            android:onClick="GoSettingPrivacyOnClick"
+            app:layout_column="0"
+            app:layout_row="2"
+            app:srcCompat="@android:drawable/ic_menu_manage" />
+
+        <Button
+            android:id="@+id/btnsettingsM2"
+            android:layout_width="339dp"
+            android:layout_height="58dp"
+            android:backgroundTint="#020202"
+            android:gravity="center|left"
+            android:onClick="GoSettingPrivacyOnClick"
+            android:text="Ayarlar ve Gizlilik"
+            android:textColor="#D0CECE"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_column="1"
+            app:layout_row="2" />
+
+        <ImageButton
+            android:id="@+id/imgBtninnovations"
+            android:layout_width="73dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#050505"
+            android:onClick="GoInnovationsOnClick"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+        <ImageButton
+            android:id="@+id/imgBtnhistory"
+            android:layout_width="73dp"
+            android:layout_height="61dp"
+            android:backgroundTint="#020202"
+            android:onClick="historyOnClick"
+            app:layout_column="0"
+            app:layout_row="1"
+            app:srcCompat="@android:drawable/ic_menu_recent_history" />
+
+        <Button
+            android:id="@+id/btninnovationsM"
+            android:layout_width="334dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#020202"
+            android:gravity="center|left"
+            android:onClick="GoInnovationsOnClick"
+            android:text="Yenilikler"
+            android:textColor="#D0CECE"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/btnhistoryM"
+            android:layout_width="334dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#020202"
+            android:gravity="center|left"
+            android:onClick="historyOnClick"
+            android:text="Dinleme Geçmişi"
+            android:textColor="#D0CECE"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/btnSignOut"
+            android:layout_width="337dp"
+            android:layout_height="58dp"
+            android:backgroundTint="#020202"
+            android:gravity="center|left"
+            android:onClick="SignOutOnClick"
+            android:text="Çıkış Yap"
+            android:textColor="#D0CECE"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_column="1"
+            app:layout_row="3" />
+
+        <ImageButton
+            android:id="@+id/SignOutOnClick"
+            android:layout_width="73dp"
+            android:layout_height="57dp"
+            android:backgroundTint="#040404"
+            android:onClick="SignOutOnClick"
+            app:layout_column="0"
+            app:layout_row="3"
+            app:srcCompat="@android:drawable/ic_lock_power_off"
+            app:tint="#A29D9D" />
+    </androidx.gridlayout.widget.GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

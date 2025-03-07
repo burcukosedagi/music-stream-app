@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainProfile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#050505"
+    tools:context=".ProfileActivity">
+
+    <ImageButton
+        android:id="@+id/imgBtnBacktosetting"
+        android:layout_width="94dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="312dp"
+        android:layout_marginBottom="1dp"
+        android:backgroundTint="#040404"
+        android:onClick="goBackHomeOnClick"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewPhoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <ImageView
+        android:id="@+id/imageViewPhoto"
+        android:layout_width="83dp"
+        android:layout_height="84dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="14dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayoutInfo2"
+        app:layout_constraintEnd_toStartOf="@+id/gridLayoutInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtnBacktosetting" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayoutInfo"
+        android:layout_width="289dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayoutInfo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewuserName">
+
+        <TextView
+            android:id="@+id/txtViewFollowers"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:text="100"
+            android:textColor="#D0CECE"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <TextView
+            android:id="@+id/txtViewF"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:text="takipçi"
+            android:textSize="13sp"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <TextView
+            android:id="@+id/textViewD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="."
+            android:textColor="#D5D2D2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_column="2"
+            app:layout_row="0" />
+
+        <TextView
+            android:id="@+id/txtViewFollows"
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:text="100"
+            android:textColor="#FDFDFD"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_column="3"
+            app:layout_row="0" />
+
+        <TextView
+            android:id="@+id/txtViewF2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="takip edilen"
+            android:textSize="13sp"
+            app:layout_column="4"
+            app:layout_row="0" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/txtViewuserName"
+        android:layout_width="300dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="1dp"
+        android:text=""
+        android:textColor="#D0CECE"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayoutInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPhoto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtViewplayList"
+        android:layout_width="307dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="99dp"
+        android:text="Çalma Listeleri"
+        android:textColor="#D0CECE"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewAlbums"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayoutInfo2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAlbums"
+        android:layout_width="411dp"
+        android:layout_height="371dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="4dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewplayList" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayoutInfo2"
+        android:layout_width="208dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="188dp"
+        android:layout_marginBottom="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtViewplayList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayoutInfo">
+
+        <Button
+            android:id="@+id/btneditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="GoSettingPrivacyOnClick"
+            android:backgroundTint="#040404"
+            android:text="Düzenle"
+            android:textColor="#878686"
+            android:textSize="18sp"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <ImageButton
+            android:id="@+id/imgBtnshareProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#050505"
+            android:onClick="shareProfileOnClick"
+            app:layout_column="1"
+            app:layout_row="0"
+            app:srcCompat="?attr/actionModeShareDrawable" />
+    </androidx.gridlayout.widget.GridLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMenu"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_marginBottom="0dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:backgroundTint="#070707"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imgBtnHome"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#00FFFFFF"
+                android:onClick="goBackHomeOnClick"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_home" />
+
+            <Button
+                android:id="@+id/btnHome"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#00FFFFFF"
+                android:textColor="#FFFFFF"
+                android:onClick="goBackHomeOnClick"
+                android:text="Home"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imgBtnProfile2"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#00FFFFFF"
+                android:onClick="goBackProfilOnClick"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_profile" />
+
+            <Button
+                android:id="@+id/btnProfile"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#00FFFFFF"
+                android:textColor="#FFFFFF"
+                android:onClick="goBackProfilOnClick"
+                android:text="Profile"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+        <!-- Sağ bölme -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imgBtnSearch"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#00FFFFFF"
+                android:onClick="goBackSearchOnClick"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_search" />
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:backgroundTint="#00FFFFFF"
+                android:textColor="#FFFFFF"
+                android:onClick="goBackSearchOnClick"
+                android:text="Search"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

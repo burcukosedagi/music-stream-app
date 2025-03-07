@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainSearch"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020202"
+    tools:context=".SearchActivity">
+
+    <ImageButton
+        android:id="@+id/imgBtnProfile2"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:scaleType="centerCrop"
+        android:background="#00FFFFFF"
+        android:onClick="backtoSettings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/searchTxt"
+        android:layout_width="135dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="56dp"
+        android:text=" ARA"
+        android:textColor="#C7C4C4"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imgBtnProfile2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchViewFindSongs"
+        android:layout_width="381dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/rounded_search_background"
+        android:iconifiedByDefault="false"
+        android:queryHint="Bir şeyler arayın..."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtnProfile2">
+
+    </androidx.appcompat.widget.SearchView>
+
+    <Button
+        android:id="@+id/btnCategory6"
+        android:layout_width="173dp"
+        android:layout_height="111dp"
+        android:layout_below="@id/btnCategory6"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#924882"
+        android:onClick="goCategoryOnClick"
+        android:text="Jazz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCategory5" />
+
+    <Button
+        android:id="@+id/btnCategory1"
+        android:layout_width="173dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#4E5DAD"
+        android:onClick="goCategoryOnClick"
+        android:text="Türk Sanat Müziği"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchText2" />
+
+    <Button
+        android:id="@+id/btnCategory4"
+        android:layout_width="173dp"
+        android:layout_height="111dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#A42A4D"
+        android:onClick="goCategoryOnClick"
+        android:text="Heavy Metal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchText2" />
+
+    <Button
+        android:id="@+id/btnCategory2"
+        android:layout_width="173dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#6C4E95"
+        android:onClick="goCategoryOnClick"
+        android:text="Rap"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCategory1" />
+
+    <Button
+        android:id="@+id/btnCategory3"
+        android:layout_width="173dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#A44646"
+        android:onClick="goCategoryOnClick"
+        android:text="Yabancı Pop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCategory2" />
+
+    <Button
+        android:id="@+id/btnCategory5"
+        android:layout_width="173dp"
+        android:layout_height="111dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#4C784E"
+        android:onClick="goCategoryOnClick"
+        android:text="Türkçe Pop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCategory4" />
+
+    <TextView
+        android:id="@+id/searchText2"
+        android:layout_width="390dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:text="Müzik Türlerini Keşfet"
+        android:textColor="#D0CECE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchViewFindSongs" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMenu"
+        android:layout_width="395dp"
+        android:layout_height="112dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#070707"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imgBtnHome"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#00FFFFFF"
+                android:onClick="goBackHomeOnClick"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_home" />
+
+            <Button
+                android:id="@+id/btnHome"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#00FFFFFF"
+                android:onClick="goBackHomeOnClick"
+                android:text="Home"
+                android:textColor="#FFFFFF"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imgBtnProfile"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#00FFFFFF"
+                android:onClick="goBackProfilOnClick"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_profile" />
+
+            <Button
+                android:id="@+id/btnProfile"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#00FFFFFF"
+                android:onClick="goBackProfilOnClick"
+                android:text="Profile"
+                android:textColor="#FFFFFF"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+        <!-- Sağ bölme -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imgBtnSearch"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#00FFFFFF"
+                android:onClick="goBackSearchOnClick"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_search" />
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:backgroundTint="#00FFFFFF"
+                android:onClick="goBackSearchOnClick"
+                android:text="Search"
+                android:textColor="#FFFFFF"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

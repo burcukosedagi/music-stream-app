@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainAlbum"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3000000"
+
+
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintRenameBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CF070707"
+        android:backgroundTint="#CF070707"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ConstraintRenameFront"
+            android:layout_width="366dp"
+            android:layout_height="179dp"
+            android:background="@drawable/rounded_grid"
+            android:backgroundTint="#E45F5E5E"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/btnRename"
+                android:layout_width="120dp"
+                android:layout_height="46dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#62000000"
+                android:insetBottom="0dp"
+                android:text="Kaydet"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="120dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#62000000"
+                android:insetBottom="0dp"
+                android:text="İptal"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="303dp"
+                android:layout_height="64dp"
+                android:text="Yeni album adını giriniz:"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.253"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.139" />
+
+            <EditText
+                android:id="@+id/txtNewAlbumName"
+                android:layout_width="361dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="#FFFFFF"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:text="  "
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textColorLink="#FFFCFC"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintPropertiesCam"
+        android:layout_width="360dp"
+        android:layout_height="225dp"
+        android:layout_marginTop="148dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/text5"
+            android:layout_width="46dp"
+            android:layout_height="79dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="40dp"
+            android:text="•"
+            android:textSize="75sp"
+            app:layout_column="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_row="1"
+            tools:ignore="DuplicateIds" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/GridPropertiesCam"
+            android:layout_width="271dp"
+            android:layout_height="154dp"
+            android:background="@drawable/rounded_grid"
+            android:backgroundTint="#E54E4D4D"
+            android:clickable="false"
+            app:layout_column="0"
+            app:layout_row="0"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/btnAddList2"
+                android:layout_width="267dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00FFFFFF"
+                android:insetTop="4dp"
+                android:insetBottom="4dp"
+                android:text="+ Çalma listesine şarkı ekle"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:iconPadding="8dp"
+                app:layout_column="0"
+                app:layout_row="0" />
+
+            <Button
+                android:id="@+id/btnRenameAlbum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00FFFFFF"
+                android:textColor="@color/white"
+                android:insetTop="4dp"
+                android:insetBottom="4dp"
+                android:text="✎ Yeniden Adllandır"
+                android:textAlignment="textStart"
+                android:textSize="16sp"
+                app:iconPadding="8dp"
+                app:layout_column="0"
+                app:layout_row="1" />
+
+            <Button
+                android:id="@+id/btnDeleteAlbum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:backgroundTint="#00FFFFFF"
+                android:insetTop="4dp"
+                android:insetBottom="4dp"
+                android:text="× Çalma listesini sil"
+                android:textAlignment="textStart"
+                android:textSize="16sp"
+                app:iconPadding="8dp"
+                app:layout_column="0"
+                app:layout_row="2" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="46dp"
+            android:layout_height="79dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="4dp"
+            android:text="•"
+            android:textSize="60sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="DuplicateIds" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridAddSong"
+        android:layout_width="355dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        android:onClick="AddListOnClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.552"
+        tools:ignore="MissingConstraints,OnClick">
+
+        <TextView
+            android:id="@+id/txtAddList"
+            android:layout_width="261dp"
+            android:layout_marginTop="8dp"
+            android:onClick="AddListOnClick"
+            android:text=" Çalma Listesine Ekle"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <ImageButton
+            android:id="@+id/btnAddList"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:background="@drawable/plus"
+            android:contentDescription="AddListbutton"
+            android:cropToPadding="true"
+            android:onClick="AddListOnClick"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <ImageButton
+        android:id="@+id/btnProperties"
+        android:layout_width="30dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="20dp"
+        android:cropToPadding="true"
+        android:scaleType="fitCenter"
+        android:background="@drawable/vertical"
+        android:contentDescription="Propertiesbutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.465" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSongs"
+        android:layout_width="match_parent"
+        android:layout_height="329dp"
+        android:scrollbars="vertical"
+        android:scrollbarSize="7dp"
+        android:fadeScrollbars="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="66dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="4dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:text="❮"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <ImageView
+        android:id="@+id/imgAlbum"
+        android:layout_width="262dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtAlbumName"
+        android:layout_width="347dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="288dp"
+        android:text="Album Adı"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FDFDFD"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTotalHour"
+        android:layout_width="299dp"
+        android:layout_height="39dp"
+        android:text="Total süre"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.287"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.434" />
+
+    <ImageButton
+        android:id="@+id/btnMix"
+        android:layout_width="50dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="400dp"
+        android:contentDescription="Mix button"
+        android:cropToPadding="true"
+        android:scaleType="fitCenter"
+        android:background="@drawable/mixer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnPlay"
+        android:layout_width="48dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginBottom="400dp"
+        android:background="@drawable/musicplayerbutton2"
+        android:contentDescription="Playbutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintSongProperty"
+        android:layout_width="228dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="72dp"
+        android:background="@drawable/rounded_grid"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.651"
+        tools:ignore="MissingConstraints">
+
+
+        <Button
+            android:id="@+id/btnDeleteSong"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:insetTop="4dp"
+            android:insetBottom="4dp"
+            android:text="× Çalma listesini sil"
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            app:iconPadding="8dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="1dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
